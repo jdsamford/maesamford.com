@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mae's Babysitting | Safe and Caring Childcare Services</title>
+  <meta name="description" content="Mae is a Seattle Children's Better Babysitter certified and CPR certified babysitter. Weekdays 4:00 to 9:00 pm, weekends anytime until 10:00 pm.">
+  <meta name="theme-color" content="#fdf3ec">
+  <link rel="canonical" href="https://maesamford.com/">
+
+  <!-- Link previews (iMessage, WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maesamford.com/">
+  <meta property="og:title" content="Mae's Babysitting">
+  <meta property="og:description" content="Safe and Caring Childcare Services. Better Babysitter and CPR certified.">
+  <meta property="og:image" content="https://maesamford.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Babysitting in rainbow letters with a photo of Mae">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="waves" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-text">
+        <h1 aria-label="Babysitting">
+          <span class="line" aria-hidden="true"><span class="c1">B</span><span class="c2">A</span><span class="c3">B</span><span class="c4">Y</span></span>
+          <span class="line" aria-hidden="true"><span class="c5">S</span><span class="c6">I</span><span class="c7">T</span><span class="c8">T</span><span class="c9">I</span><span class="c10">N</span><span class="c11">G</span></span>
+        </h1>
+        <p class="tagline">Safe and Caring Childcare Services</p>
+        <a class="btn" href="#contact">Contact Mae</a>
+      </div>
+      <div class="photo">
+        <img src="/mae.jpg" width="515" height="515" alt="Mae smiling, wearing a headband with a pink bow">
+      </div>
+    </section>
+
+    <section class="quals" aria-labelledby="quals-title">
+      <h2 id="quals-title">Qualifications</h2>
+      <ul>
+        <li><span class="check red" aria-hidden="true"></span>Seattle Children's Better Babysitter Certified</li>
+        <li><span class="check orange" aria-hidden="true"></span>CPR certified</li>
+        <li><span class="check blue" aria-hidden="true"></span>Weekdays 4:00 to 9:00 pm, weekends anytime until 10:00 pm</li>
+        <li><span class="check green" aria-hidden="true"></span>Responsible, reliable, communicative babysitter</li>
+      </ul>
+    </section>
+
+    <section class="bio" aria-label="About Mae">
+      <p>Hi! I'm Mae. I am 13 years old, an eighth grader, and newly certified babysitter! My best days are the days I spend with my neighbors playing outside and my cousins playing pretend. I am newly certified as a "Better Babysitter" by Seattle Children's Hospital. I'd love to be your babysitter!</p>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="email">
+        <a class="addr" id="addr" href="mailto:maesbabysittingservices@gmail.com">maesbabysittingservices@gmail.com</a>
+        <button class="btn btn-small" type="button" id="copy">Copy</button>
+      </div>
+      <p class="copied" id="copied" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <svg class="swirl" viewBox="0 0 300 300" aria-hidden="true">
+      <g fill="none" stroke-width="14" stroke-linecap="round">
+        <path d="M150 150 m-24 0 a24 24 0 1 1 48 0 a48 48 0 1 1 -96 0 a72 72 0 1 1 144 0 a96 96 0 1 1 -192 0 a120 120 0 1 1 240 0" stroke="url(#rb)"/>
+      </g>
+      <defs>
+        <linearGradient id="rb" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f5140f"/>
+          <stop offset=".2" stop-color="#fd8a0b"/>
+          <stop offset=".38" stop-color="#fdd106"/>
+          <stop offset=".56" stop-color="#7aa85f"/>
+          <stop offset=".74" stop-color="#5b9bd5"/>
+          <stop offset="1" stop-color="#9b7fd6"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="wrap">maesamford.com</div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("copy");
+      var out = document.getElementById("copied");
+      var addr = document.getElementById("addr");
+      btn.addEventListener("click", function () {
+        var text = addr.textContent.trim();
+        function fallback() {
+          var r = document.createRange(); r.selectNodeContents(addr);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          out.textContent = "Selected. Press Ctrl+C (or ⌘C) to copy.";
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            out.textContent = "Email address copied.";
+          }, fallback);
+        } else {
+          fallback();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
